@@ -1,0 +1,75 @@
+
+    #include <stdio.h>
+void main()
+{
+    char a[100];
+  float b[100],sum=0,k=1,sum2=0;
+  int i=0,s=1,t=1,series,x,minus=0,mishima=0,j;
+    scanf("%s",a);
+   scanf("%d",&series);
+    if(a[i]=='-')
+    {
+        i++;
+        minus=1;
+        
+    }
+ while( a[i]!='N')     
+ {
+    if(a[i]!='/')
+    {
+    mishima=1;
+    break;
+    }
+    b[i]=(float)a[i]-48.0;
+     s*=t;
+     t*=10;
+     i++;
+     
+    
+     
+ }
+   if(minus==1)
+   i=1;
+   else
+   i=0;
+   t/=10;
+   while(t!=0)
+   {b[i]*=t;
+
+   t/=10;
+   sum+=b[i];
+    i++;
+    
+}
+if(mishima==1)
+{
+i--;
+j=i;
+t=1;
+s=1;
+    while( a[i]!='N')  
+    {
+ b[i]=(float)a[i]-48.0;
+     s*=t;
+     t*=10;
+     i++;   
+}
+ i=j;
+   t/=10;
+   while(t!=0)
+   {b[i]*=t;
+
+   t/=10;
+   sum2+=b[i];
+    i++;
+}
+}
+if(minus==1)
+sum2*=-1;
+
+for(x=1;x<=series;x++)
+{printf("%f ",k*sum);
+k++;
+    
+}
+}
